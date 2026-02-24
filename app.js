@@ -150,7 +150,7 @@ function updateLocalAngle(command) {
             updateAngleDisplay('base', Math.max(jointAngles.base - stepSize, 0));
             break;
         case 'C':
-            updateAngleDisplay('shoulder', Math.min(jointAngles.shoulder + stepSize, 190));
+            updateAngleDisplay('shoulder', Math.min(jointAngles.shoulder + stepSize, 210));
             break;
         case 'D':
             updateAngleDisplay('shoulder', Math.max(jointAngles.shoulder - stepSize, 120));
