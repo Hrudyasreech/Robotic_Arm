@@ -15,7 +15,7 @@ const RX_CHAR_UUID = '6e400002-b5a3-f393-e0a9-e50e24dcca9e';
 // Joint angle tracking
 const jointAngles = {
     base: 90,
-    shoulder: 90,
+    shoulder: 130,
     elbow: 90,
     wrist: 90,
     gripper: 90
@@ -150,10 +150,10 @@ function updateLocalAngle(command) {
             updateAngleDisplay('base', Math.max(jointAngles.base - stepSize, 0));
             break;
         case 'C':
-            updateAngleDisplay('shoulder', Math.min(jointAngles.shoulder + stepSize, 180));
+            updateAngleDisplay('shoulder', Math.min(jointAngles.shoulder + stepSize, 190));
             break;
         case 'D':
-            updateAngleDisplay('shoulder', Math.max(jointAngles.shoulder - stepSize, 0));
+            updateAngleDisplay('shoulder', Math.max(jointAngles.shoulder - stepSize, 120));
             break;
         case 'E':
             updateAngleDisplay('elbow', Math.min(jointAngles.elbow + stepSize, 180));
